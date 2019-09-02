@@ -1,14 +1,16 @@
 - input: |
-    1256BL
-    10:43
-    12A
-    B
-    70.00
-    100.00
+    2.0
+    4.0
+    9.6
+    5.0
   output: |
-    ### Cartão de Embarque ###
-    Identificador do voo: 1256BL
-    Horário: 10:43
-    Assento: 12A
-    Portão: B
-    Total de Imposto: 30.0%
+    -0.2
+
+- input: |
+    2.0
+    4.0
+    9.6
+    5.4
+  output: |
+    0.2
+
