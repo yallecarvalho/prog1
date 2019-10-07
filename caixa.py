@@ -1,15 +1,21 @@
 n = int(input())
 num_dados = 0
 
+a = False
+
 for i in range(n):
     dados = input()
     d = dados.split()
     num_dados += 1
-    if int(d[0]) < 0:
+    if not a and int(d[0]) < 0:
+        a = True
         print('dado inconsistente. peso negativo.')
-    elif int(d[1]) < 0:
+    elif not a and int(d[1]) < 0:
+        a = True
         print('dado inconsistente. combustível negativo.')
-    elif int(d[2]) < 0:
+    elif not a and int(d[2]) < 0:
+        a = True
         print('dado inconsistente. altitude negativa.')
-    else:
-        print('{} dados válidos.'.format(num_dados))
+
+print('{} dados válidos.'.format(num_dados))
+
