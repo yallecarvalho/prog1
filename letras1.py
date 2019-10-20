@@ -7,12 +7,13 @@ sem, com = [], []
 
 for i in range(num):
     palavra = input()
-    duplicou = False
-    for j in range(len(palavra)-1):
-        if palavra[j] == palavra[j-1]:
-            duplicou = True
-            com.append(palavra)
-    if duplicou == False:
+    dob = 0
+    for j in range(1, len(palavra)):
+        if palavra[j-1] == palavra[j]:
+            dob += 1
+    if dob >= 1:
+        com.append(palavra)
+    if dob == 0:
         sem.append(palavra)
 
 print('{} palavra(s) com letras dobradas:'.format(len(com)))
